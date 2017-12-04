@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+ 
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+ <title>Forms</title>
+ <script type="text/javascript" src="rent_car_dynamic.js"></script>
+
+<style>
+
+body {
+	background-color:powderblue;
+}
+.align {
+	text-align:center;
+}
+li {
+	list-style:none;
+}
+	
+label {
+	display:block;
+	margin-bottom:5px;
+}
+
+.form {
+	background-color:white;
+	width:500px;
+	padding:50px;
+	margin:50px auto;
+	border-radius:5px;
+	font-weight:bold;
+	font-size:15px;
+	font-family:"arial", sans-serif;
+}
+
+.email {
+	width:100%;
+	margin-bottom:15px;	
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.cartype {
+	width:100%;
+	margin-bottom:15px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.message {
+	width:95%;
+	margin-bottom:15px;
+	font-weight:normal;
+	color:blue;
+	padding:10px;
+	background-color:#e6ffff;
+}
+
+.name {
+	width:48%;
+	margin-bottom:15px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.required {
+	color:red;
+}
+
+.button {
+	background-color:#0080ff;
+	width:100px;
+	padding:10px;
+	color:white;
+	font-weight:bold;
+	border-radius:5px;
+}
+
+
+</style>
+
+ 
+ </head>
+ <body>
+ <h1 class="align" id="busName"></h1>
+ <div class="form">
+	<ul>
+		<li>
+			<label>Full Name <span class="required"> *</span></label>
+			<input class="name" type="text" id="firstName" placeholder="First"></input>&nbsp;
+			<input class="name" type="text" id="lastName" placeholder="Last" ></input>
+			
+		</li>
+		
+		<li>
+			<label>Email<span class="required"> *</span></label>
+			<input class="email" type="email" placeholder="Email" class="email"></input>
+		</li>
+		
+		<li>
+			<label>Car type</label>
+			<select id="carType" class="cartype" onchange="display_details()">
+			
+			</select>
+			
+		</li>
+		<li>
+			<div id="message" class="message">
+			</div>
+		</li>
+		<li>
+			<input class="button" type="submit" onclick="ValidateForm()"></input>
+		</li>
+	</ul>
+</div>	
+
+ </body>
